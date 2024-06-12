@@ -157,7 +157,7 @@ jobs:
   jobs/job_fincrimes_airflow:
     name: job_fincrimes_airflow
     description: ''
-    fabricUID: 9770
+    fabricUID: 13760
     scheduler:
       Prophecy: {}
     cloudProvider: null
@@ -173,9 +173,9 @@ jobs:
     - pipelines/pipe_financial_crimes
     jobClusterMode:
       clusterMode:
-        Single: {}
+        Multi: {}
       clusterId: null
-    enabled: null
+    enabled: false
     createdAt: '2024-02-20 19:49:37'
     author: bobw@prophecy.io
 gemContainer:
@@ -213,7 +213,7 @@ dependencies:
 - type: plibMaven
   modifiedAt: '2024-06-03T14:43:53.300169Z'
   name: plibMaven
-  version: 8.0.5
+  version: 8.0.11
   id: '188163349'
   createdAt: '2024-06-03T14:43:53.300089Z'
   enabled: true
@@ -221,7 +221,7 @@ dependencies:
 - type: plibPypi
   modifiedAt: '2024-06-03T14:43:53.300251Z'
   name: plibPypi
-  version: 1.9.4
+  version: 1.9.5
   id: '631776522'
   createdAt: '2024-06-03T14:43:53.300219Z'
   enabled: true

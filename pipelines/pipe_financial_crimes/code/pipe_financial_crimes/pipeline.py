@@ -21,7 +21,7 @@ def pipeline(spark: SparkSession) -> None:
     )
     df_risk_scoring_out, df_risk_scoring_out0 = risk_scoring(spark, Config.risk_scoring, df_join_multiple_dataframes)
     df_flagged_transx = flagged_transx(spark, df_risk_scoring_out)
-    table_all_transx(spark, df_risk_scoring_out0)
+    UNITY_all_transx(spark, df_risk_scoring_out0)
     t_flagged_transx(spark, df_flagged_transx)
     csv_all_transx(spark, df_risk_scoring_out0)
 

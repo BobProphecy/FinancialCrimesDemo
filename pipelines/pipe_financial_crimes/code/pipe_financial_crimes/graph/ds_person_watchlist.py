@@ -6,6 +6,7 @@ from prophecy.libs import typed_lit
 from pipe_financial_crimes.config.ConfigStore import *
 from pipe_financial_crimes.udfs.UDFs import *
 
+@instrument
 def ds_person_watchlist(spark: SparkSession) -> DataFrame:
     return spark.read\
         .schema(StructType([StructField("full_name", StringType(), True), StructField("reason", StringType(), True)]))\

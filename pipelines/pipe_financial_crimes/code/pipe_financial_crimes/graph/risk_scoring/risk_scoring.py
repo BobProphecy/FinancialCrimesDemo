@@ -6,6 +6,7 @@ from pipe_financial_crimes.udfs.UDFs import *
 from . import *
 from .config import *
 
+@instrument
 def risk_scoring(spark: SparkSession, subgraph_config: SubgraphConfig, in0: DataFrame) -> (DataFrame, DataFrame):
     Config.update(subgraph_config)
     df_risk_flags = risk_flags(spark, in0)

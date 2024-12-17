@@ -6,6 +6,7 @@ from prophecy.libs import typed_lit
 from .config import *
 from pipe_financial_crimes.udfs.UDFs import *
 
+@instrument
 def risk_score(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return in0.select(
         col("transaction_id"), 

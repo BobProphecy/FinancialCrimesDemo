@@ -6,5 +6,6 @@ from prophecy.libs import typed_lit
 from pipe_financial_crimes.config.ConfigStore import *
 from pipe_financial_crimes.udfs.UDFs import *
 
+@instrument
 def table_wire_transfer_1(spark: SparkSession) -> DataFrame:
     return spark.read.table("`bobwelshmer`.`financial_crimes`.`wire_transfer`")

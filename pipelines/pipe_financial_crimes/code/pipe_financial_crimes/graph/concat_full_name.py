@@ -6,6 +6,7 @@ from prophecy.libs import typed_lit
 from pipe_financial_crimes.config.ConfigStore import *
 from pipe_financial_crimes.udfs.UDFs import *
 
+@instrument
 def concat_full_name(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return in0.select(
         col("transaction_id"), 

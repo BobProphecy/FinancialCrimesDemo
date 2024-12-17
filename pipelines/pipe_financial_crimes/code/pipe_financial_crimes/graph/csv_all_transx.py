@@ -6,6 +6,7 @@ from prophecy.libs import typed_lit
 from pipe_financial_crimes.config.ConfigStore import *
 from pipe_financial_crimes.udfs.UDFs import *
 
+@instrument
 def csv_all_transx(spark: SparkSession, in0: DataFrame):
     in0.write\
         .option("header", True)\

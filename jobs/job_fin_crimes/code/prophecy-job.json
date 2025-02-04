@@ -76,7 +76,8 @@
           },
           "overrides" : { },
           "selectedInstance" : "default"
-        }
+        },
+        "projectId" : "19959"
       }
     }
   },
